@@ -1,3 +1,11 @@
+%--------------------------------------------------------------------------
+% DESCRIPTION: demo the result of Barone-Adesi and Whaley(BAW) model
+% Approximation of American call due to Barone-Adesi and Whaley(1987)
+% Reference:
+% Barone-Adesi,G.,and R.E.Whaley(1987): 
+%Efficeint Analytic Approximation of American Option Values, 
+%Jounral of Finance, 42(2).301-320.
+%--------------------------------------------------------------------------
 clear 
 close all
 format long;
