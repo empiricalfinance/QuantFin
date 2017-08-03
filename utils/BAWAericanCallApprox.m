@@ -1,4 +1,27 @@
 function BAWAericanCall =BAWAericanCallApprox(S,X,T,t,r,b,vol) 
+%--------------------------------------------------------------------------
+% DESCRIPTION:
+% Approximation of American call due to Barone-Adesi and Whaley(1987)
+% Reference:
+% Barone-Adesi,G.,and R.E.Whaley(1987): 
+%Efficeint Analytic Approximation of American Option Values, 
+%Jounral of Finance, 42(2).301-320.
+%--------------------------------------------------------------------------
+% INPUTS:
+%  S:       spot price @ maturity
+%  X:       strike price
+%  r:       risk free rate
+%  b:       b= r-q carry cost rate
+%  vol:     volatility
+%  T:       time to maturity
+% This function using critical_S.m 
+%--------------------------------------------------------------------------
+% OUTPUT:
+% BAWAericanCall: price of a call option
+%--------------------------------------------------------------------------
+% Author:  Yingfeng Yu., August 2017
+%--------------------------------------------------------------------------
+
 
 if b >=r
     C_bsm=bsm_call(S,X,T,t,r,b,vol);
@@ -7,7 +30,7 @@ else
     tau=T-t;
     %Using Newton-Raphson method to solve
     %non-linear equation
-    S_star=critical_S(X,tau,r,b,vol);
+    S_star=critical_S(X,tau,r,b,vol);%using author wrtitten function 'critical_S.m' 
     N= 2*b/(vol^2);
     M= 2*r/(vol^2);
     h = 1-exp(-r*tau);
