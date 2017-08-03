@@ -7,7 +7,7 @@ vol=0.35;%anually volatility
 X=60;%strike price
 r=0.2;%risk-free rate
 q=0.1;%compounded discount rate
-b=r-q;% b=r-q where 
+b=r-q;% carry cost rate
 t=.0;
 
 C_am=BAWAericanCallApprox(S,X,T,t,r,b,vol)
