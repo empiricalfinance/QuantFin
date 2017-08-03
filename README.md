@@ -1,4 +1,4 @@
-# demo my course materials
+# My course materials
 Teaching materials related to my courses
 * BSM formula(matlab,py,C/C++,CUDA C)
 * A simple Garch11 demo
