@@ -1,19 +1,21 @@
 # Readme
-## Run "test_european_option_payoff.m" and then you gain: 
+## Demo01 Run "test_european_option_payoff.m" and then you gain: 
 ## ![Mou](/utils/four_diagram_euro.png)
-'''
-package com.qyf404.learn.maven;
 
-import org.junit.After;
+## Demo02 Run "test_BAWAericanCallApprox.m", we demo BAW america call option pricing formula
+```matlab
+clear 
+close all
+format long;
+S=50;%underlying asset price
+T=0.5;%contract maturity
+vol=0.35;%anually volatility
+X=60;%strike price
+r=0.2;%risk-free rate
+q=0.1;%compounded discount rate
+b=r-q;% b=r-q where 
+t=.0;
 
-import org.junit.Assert;
-
-import org.junit.Before;
-
-import org.junit.Test;
-
-public class AppTest {
-
-private App app;
-
-'''
+C_am=BAWAericanCallApprox(S,X,T,t,r,b,vol)
+C_bsm=bsm_call(S,X,T,t,r,b,vol)
+```
